@@ -12,3 +12,4 @@ class tagebuchApp(QtGui.QWidget, Labortagebuch_Qt4.Ui_Form):
 
 
 
+

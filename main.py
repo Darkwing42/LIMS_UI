@@ -23,6 +23,7 @@ class ExampleApp(QtGui.QMainWindow, Hauptfenster_Qt4.Ui_MainWindow):
 
 
 
+
 def main():
     app = QtGui.QApplication(sys.argv)
     form = ExampleApp()
