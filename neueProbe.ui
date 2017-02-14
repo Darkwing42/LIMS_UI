@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>NeueProbe</class>
+ <widget class="QDialog" name="NeueProbe">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -151,8 +151,8 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
-     <widget class="QLineEdit" name="chemieLineEdit"/>
+    <item row="4" column="0">
+     <widget class="QComboBox" name="mibiPakete_2"/>
     </item>
    </layout>
   </widget>
@@ -161,8 +161,8 @@
     <rect>
      <x>460</x>
      <y>30</y>
-     <width>273</width>
-     <height>387</height>
+     <width>592</width>
+     <height>616</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout_3">
@@ -177,7 +177,7 @@
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QCheckBox" name="checkBox">
+     <widget class="QCheckBox" name="aerobeGKZ">
       <property name="text">
        <string>aerobe mesophile GKZ</string>
       </property>
@@ -187,14 +187,21 @@
      <widget class="QComboBox" name="mibiPakete"/>
     </item>
     <item row="1" column="1">
-     <widget class="QCheckBox" name="checkBox_2">
+     <widget class="QCheckBox" name="anaerobeGKZ">
       <property name="text">
        <string>anaerobe mesophile GKZ</string>
       </property>
      </widget>
     </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="checkBox_13">
+      <property name="text">
+       <string>Flüssig</string>
+      </property>
+     </widget>
+    </item>
     <item row="2" column="1">
-     <widget class="QCheckBox" name="checkBox_3">
+     <widget class="QCheckBox" name="entero">
       <property name="text">
        <string>Enterobacteriacaea</string>
       </property>
@@ -208,21 +215,21 @@
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QCheckBox" name="checkBox_4">
+     <widget class="QCheckBox" name="ecoliNormal">
       <property name="text">
        <string>E. coli (Normal)</string>
       </property>
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QCheckBox" name="checkBox_5">
+     <widget class="QCheckBox" name="ecoliTP">
       <property name="text">
        <string>E. coli (TP)</string>
       </property>
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QCheckBox" name="checkBox_6">
+     <widget class="QCheckBox" name="coliformeKeime">
       <property name="text">
        <string>colifome Keime</string>
       </property>
@@ -236,7 +243,7 @@
      </widget>
     </item>
     <item row="8" column="1">
-     <widget class="QCheckBox" name="checkBox_7">
+     <widget class="QCheckBox" name="pseudo">
       <property name="text">
        <string>Pseudomonaden</string>
       </property>
@@ -250,37 +257,9 @@
      </widget>
     </item>
     <item row="10" column="1">
-     <widget class="QCheckBox" name="checkBox_8">
+     <widget class="QCheckBox" name="lacto">
       <property name="text">
        <string>Milchsäurebakterien</string>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="1">
-     <widget class="QCheckBox" name="checkBox_9">
-      <property name="text">
-       <string>Hefen</string>
-      </property>
-     </widget>
-    </item>
-    <item row="13" column="1">
-     <widget class="QCheckBox" name="checkBox_10">
-      <property name="text">
-       <string>Schimmelpilze</string>
-      </property>
-     </widget>
-    </item>
-    <item row="15" column="1">
-     <widget class="QCheckBox" name="checkBox_11">
-      <property name="text">
-       <string>Staph (normal)</string>
-      </property>
-     </widget>
-    </item>
-    <item row="16" column="1">
-     <widget class="QCheckBox" name="checkBox_12">
-      <property name="text">
-       <string>Staph(TP)</string>
       </property>
      </widget>
     </item>
@@ -291,10 +270,143 @@
       </property>
      </widget>
     </item>
+    <item row="12" column="1">
+     <widget class="QCheckBox" name="hefen">
+      <property name="text">
+       <string>Hefen</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="QCheckBox" name="schimmel">
+      <property name="text">
+       <string>Schimmelpilze</string>
+      </property>
+     </widget>
+    </item>
     <item row="14" column="0" colspan="2">
      <widget class="Line" name="line_5">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1">
+     <widget class="QCheckBox" name="staphNormal">
+      <property name="text">
+       <string>Staph (normal)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="1">
+     <widget class="QCheckBox" name="staphTP">
+      <property name="text">
+       <string>Staph(TP)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="0" colspan="2">
+     <widget class="Line" name="line_6">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="1">
+     <widget class="QCheckBox" name="bacillusCereus">
+      <property name="text">
+       <string>Bacillus cereus</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="0" colspan="2">
+     <widget class="Line" name="line_7">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="1">
+     <widget class="QCheckBox" name="sulfitreduClost">
+      <property name="text">
+       <string>sulfitreduzierende Clostridien</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="1">
+     <widget class="QCheckBox" name="sporenSulfitreduClost">
+      <property name="text">
+       <string>sporen sulfitreduzierender Clostridien</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="1">
+     <widget class="QCheckBox" name="clostridumPerfringens">
+      <property name="text">
+       <string>Clostridium perfringens</string>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="0" colspan="2">
+     <widget class="Line" name="line_8">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="24" column="1">
+     <widget class="QCheckBox" name="salmonellaPCR">
+      <property name="text">
+       <string>Salmonella (PCR)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="25" column="1">
+     <widget class="QCheckBox" name="salmonellaKlassisch">
+      <property name="text">
+       <string>Salmonella (klassisch)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="26" column="0" colspan="2">
+     <widget class="Line" name="line_9">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="27" column="1">
+     <widget class="QCheckBox" name="lMonoQuant">
+      <property name="text">
+       <string>Listeria monocytogenes (Zählverfahren, quantitativ)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="28" column="1">
+     <widget class="QCheckBox" name="lMonoQual">
+      <property name="text">
+       <string>Listeria monocytogenes (Nachweisverfahren, qualitativ)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="31" column="0" colspan="2">
+     <widget class="Line" name="line_10">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="29" column="1">
+     <widget class="QCheckBox" name="ehec">
+      <property name="text">
+       <string>STEC/EHEC</string>
+      </property>
+     </widget>
+    </item>
+    <item row="30" column="1">
+     <widget class="QCheckBox" name="ESBL">
+      <property name="text">
+       <string>ESBL</string>
       </property>
      </widget>
     </item>

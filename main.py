@@ -3,6 +3,10 @@ import Hauptfenster_Qt4
 import sys, os
 import tagebuch
 
+try:
+    if sys.platform == 'win32':
+
+
 class ExampleApp(QtGui.QMainWindow, Hauptfenster_Qt4.Ui_MainWindow):
     def __init__(self):
         super(ExampleApp, self).__init__()
@@ -10,10 +14,10 @@ class ExampleApp(QtGui.QMainWindow, Hauptfenster_Qt4.Ui_MainWindow):
         self.btnLabortagebuch.clicked.connect(self.tagebuch)
 
     def tagebuch(self):
+        #app = QtGui.QDialog(sys.argv)
         t = tagebuch.tagebuchApp()
         t.show()
-        app.exec_()
-
+        sys.exit(exec_())
 
 
 
